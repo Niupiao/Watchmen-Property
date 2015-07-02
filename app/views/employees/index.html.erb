@@ -1,0 +1,29 @@
+<% provide(:title, "Employees") %>
+<% params[:page_size] ||= '10' %>
+<% params[:page] ||= '1' %>
+<% params[:order] ||= 'name'%>
+<% params[:direction] ||= 'DESC' %>
+
+ <table WIDTH="50%" BORDER="2" ALIGN="CENTER" CELLSPACING="40">
+    <tr ALIGN="Center">
+      <td>Name</td>
+      <td>Username</td>
+      <td></td>
+    </tr>
+    <% Employee.limit(params[:page_size].to_i)
+           .offset(params[:page_size].to_i * (params[:page].to_i - 1))
+           .order("#{params[:order]} #{params[:direction]}")
+           .where(employer_id: session[:employer]).each do |employee| %>
+      <tr ALIGN="CENTER">
+        <td>
+          <%= employee.name %>
+        </td>
+        <td>
+          <%= employee.username %>
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+    <% end %>
+  </table>

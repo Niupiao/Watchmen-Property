@@ -6,9 +6,10 @@ class QrCodesController < ApplicationController
   
   def create
     @qr = QrCode.new(qr_code_params)
+    @qr.company_id = session[:employer]
     if @qr.save
       flash[:success] = "QRCode successfully created"
-      @qr_image = RQRCode::QRCode.new('https://moresi-property-bendrews.c9.io/qr_codes/' + @qr.id.to_s)
+      @qr_image = RQRCode::QRCode.new('https://moresi-property-bendrews.c9.io/logs/new/?format=json&qr=' + @qr.id.to_s)
       send_data @qr_image.as_png(:size => 400), type: 'image/png', filename: @qr.title + '.png'
     else
       render 'new'

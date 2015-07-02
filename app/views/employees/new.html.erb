@@ -1,8 +1,11 @@
 <%= form_for(@employee) do |f| %>
-  <%= render 'shared/employee_error_messages' %>
           
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form_control' %>
+  <br>
+  
+  <%= f.label :username %>
+  <%= f.text_field :username, class: 'form_control' %>
   <br>
 
   <%= f.label :password %>
