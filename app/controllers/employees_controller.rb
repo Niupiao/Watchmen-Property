@@ -1,7 +1,11 @@
 class EmployeesController < ApplicationController
   
   def new
-    @employee = Employee.new
+    if session[:employer]
+      @employee = Employee.new
+    else
+      redirect_to login_path
+    end
   end
   
   def create
@@ -16,6 +20,9 @@ class EmployeesController < ApplicationController
   end
   
   def index
+    if session[:employer].nil?
+      redirect_to login_path
+    end
   end
   
   private

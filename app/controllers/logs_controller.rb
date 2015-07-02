@@ -23,4 +23,10 @@ class LogsController < ApplicationController
       end
     end
   end
+  
+  def index
+    if session[:employer].nil?
+      redirect_to login_path
+    end
+  end
 end
