@@ -1,2 +1,7 @@
-Title: <%= @qr.title %>
-Body: <%= @qr.body %>
+<% require 'rqrcode' %>
+<div class='center'>
+
+<%= raw RQRCode::QRCode.new(@qr.id.to_s).as_html %>
+<br>
+<%= @qr.title %>
+</div>
