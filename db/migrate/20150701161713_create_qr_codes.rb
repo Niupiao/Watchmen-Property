@@ -1,8 +1,8 @@
 class CreateQrCodes < ActiveRecord::Migration
   def change
     create_table :qr_codes do |t|
-      t.text :title
-      t.text :body
+      t.text :location
+      t.text :content
       t.integer :company_id
 
       t.timestamps null: false

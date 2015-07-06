@@ -3,5 +3,5 @@
 
 <%= raw RQRCode::QRCode.new(@qr.id.to_s).as_html %>
 <br>
-<%= @qr.title %>
+<%= @qr.location %>
 </div>

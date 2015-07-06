@@ -6,7 +6,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.text :password_digest
       t.integer :employer_id
       t.text :auth
-      t.timestamps :auth_expires_at
+      t.integer :auth_expires_at
 
       t.timestamps null: false
     end

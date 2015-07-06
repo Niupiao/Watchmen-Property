@@ -10,7 +10,7 @@ class QrCodesController < ApplicationController
     if @qr.save
       flash[:success] = "QRCode successfully created"
       @qr_image = RQRCode::QRCode.new(@qr.id.to_s)
-      send_data @qr_image.as_png(:size => 400), type: 'image/png', filename: @qr.title + '.png'
+      send_data @qr_image.as_png(:size => 400), type: 'image/png', filename: @qr.location + '.png'
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class QrCodesController < ApplicationController
   private
   
   def qr_code_params
-    params.require(:qr_code).permit(:title, :body, :company_id)
+    params.require(:qr_code).permit(:location, :content, :company_id)
   end
   
 end
