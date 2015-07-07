@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150701201425) do
     t.text     "password_digest"
     t.integer  "employer_id"
     t.text     "auth"
+    t.integer  "auth_expires_at"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -41,8 +42,8 @@ ActiveRecord::Schema.define(version: 20150701201425) do
   end
 
   create_table "qr_codes", force: :cascade do |t|
-    t.text     "title"
-    t.text     "body"
+    t.text     "location"
+    t.text     "content"
     t.integer  "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
