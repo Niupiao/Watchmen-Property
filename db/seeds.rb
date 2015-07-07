@@ -1,2 +1,8 @@
 Employer.create(name: 'Urtu', username: 'urtu', password: 'phoenix', company_name: 'Urtu Inc.')
 Employee.create(name: 'Ryan Kwon', username: 'rhk1', password: 'phoenix', employer_id: 1)
+QrCode.create(title: "Stuff1", body: "Hey", company_id: "1")
+QrCode.create(title: "Stuff2", body: "Hey", company_id: "1")
+QrCode.create(title: "Stuff3", body: "Hey", company_id: "1")
+QrCode.create(title: "Stuff4", body: "Hey", company_id: "1")
+QrCode.create(title: "Stuff5", body: "Hey", company_id: "1")
+QrCode.create(title: "Stuff6", body: "Hey", company_id: "1")

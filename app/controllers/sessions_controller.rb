@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
         if employee && employee.authenticate(params[:password])
           employee.auth = SecureRandom.urlsafe_base64 32
           employee.auth_expires_at = Time.now.to_i + 19600
-          render :json => {auth: employee.auth, auth_expires_at: employee.auth_expires_at}
+          render :json => {id: employee.id, auth: employee.auth, auth_expires_at: employee.auth_expires_at}
         else
           render :json => {error: 'Invalid login information'}
         end

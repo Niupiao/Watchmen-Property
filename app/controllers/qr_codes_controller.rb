@@ -29,10 +29,19 @@ class QrCodesController < ApplicationController
     end
   end
   
+  def listings
+    if employee = Employee.find_by(id: params[:employee_id])
+      #if employee.auth == params[:auth] && employee.auth_expires_at >= Time.current 
+        # Check to make sure that authorization token is current, and that the token isn't expired.
+        qr_codes = QrCode.where("company_id = " + employee.employer_id.to_s)
+        render :json => qr_codes
+      #end
+    end
+  end
+  
   private
   
   def qr_code_params
     params.require(:qr_code).permit(:title, :body, :company_id)
   end
-  
 end
