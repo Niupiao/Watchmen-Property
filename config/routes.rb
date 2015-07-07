@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'auth' => 'sessions#create'
   get 'logs/new' => 'logs#new'
   get 'logs' => 'logs#index'
+  
+  get 'listings' => 'qr_codes#listings'
 end
