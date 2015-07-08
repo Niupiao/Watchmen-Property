@@ -4,16 +4,16 @@
 <% params[:order] ||= 'name'%>
 <% params[:direction] ||= 'DESC' %>
 
- <table WIDTH="50%" BORDER="2" ALIGN="CENTER" CELLSPACING="40">
-    <tr ALIGN="Center">
-      <th><h1><strong>Name</strong></h1></th>
-      <th><h1><strong>Username</strong></h1></th>
+ <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
     </tr>
     <% Employee.limit(params[:page_size].to_i)
            .offset(params[:page_size].to_i * (params[:page].to_i - 1))
            .order("#{params[:order]} #{params[:direction]}")
            .where(employer_id: session[:employer]).each do |employee| %>
-      <tr ALIGN="CENTER">
+      <tr>
         <td>
           <%= employee.name %>
         </td>

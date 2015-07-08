@@ -61,15 +61,14 @@ p {
   float: left;
   margin-right: 5px;
   font-size: 1.7em;
-  color: #fff;
+  color: #7a1b1b;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold
-}
+  }
 
 #logo:hover {
-  color: #fff;
+  color: #7a1b1b;
   text-decoration: none;
 }
 
@@ -103,24 +102,6 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
-
-table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
-}
-
-td {
-  border-left: solid 10px #000;
-  padding: 0; 
-  margin: 0; 
-  width: 0px; 
-  height: 10px; 
-}
-
-td.black { border-color: #000; }
-td.white { border-color: #fff; }
 
 // override
 
@@ -734,12 +715,11 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .navbar-form .form-control{
-    width: 300px;
+    width: 200px;
     height: 30px;
     background: white url('../img/icons/search-line-icon.png') no-repeat 3px;
-    padding-left: 12px;
+    padding-left: 10px;
     background: white image-url('search-line-icon.png') no-repeat 3px;
-    padding-left: 24px;
     margin-top: 1px;    
 }
 
@@ -997,7 +977,7 @@ div[data-role="editor-toolbar"] {
   text-transform: uppercase;
 }
 .page-header i {
-  color: #acb1b8;
+  color: #7a1b1b;
   margin-right: 10px;
   float: left;
   font-size: 30px;
