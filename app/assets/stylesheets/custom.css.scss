@@ -59,13 +59,13 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 1.7em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  font-weight: bold
 }
 
 #logo:hover {
@@ -130,7 +130,7 @@ td.white { border-color: #fff; }
 body {
     color: #797979;
     background: #eeeeee;
-    font-family: 'Lato', sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     padding: 0px !important;
     margin: 0px !important;
     font-size:14px !important;    
@@ -182,7 +182,7 @@ table tr th { color: #688a7e;}
     padding-top: 10px;
 }
 .lite{
-    color: #00a0df !important;
+    color: #802121 !important;
 }
 
 /*login page*/
@@ -379,7 +379,7 @@ table tr th { color: #688a7e;}
     width: 180px;
     height: 100%;
     position: fixed;
-    background: #394a59;
+    background: #661c1c;
 }
 
 .nav-collapse.collapse {
@@ -404,7 +404,7 @@ ul.sidebar-menu {
 }
 
 ul.sidebar-menu li ul.sub li{
-    background: #394a59;
+    background: #701d1d;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -479,7 +479,7 @@ ul.sidebar-menu li a{
     top: 2px;
 }*/
 ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #2e3b46;
+    background: #8f4040;
     color: #fff;
     display: block;
     /*border-radius: 4px;
@@ -632,7 +632,7 @@ ul.sidebar-menu li.active a i {
     border-bottom: 1px solid #f1f2f7;
 }
 .dark-bg {    
-    background: rgba(54,66,74,1);
+    background: rgba(54,66,71,1);
     border-bottom: 1px solid #f1f2f7;
 }
 .panel-content{
@@ -648,7 +648,7 @@ ul.sidebar-menu li.active a i {
 a.logo {
     font-size: 22px;
     font-weight: 300;
-    color: #fed189;
+    color: #802121;
     float: left;
     margin-top: 15px;
     text-transform: uppercase;
@@ -734,10 +734,15 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .navbar-form .form-control{
-    width: 200px;
+    width: 300px;
     height: 30px;
+<<<<<<< HEAD
+    background: white url('../img/icons/search-line-icon.png') no-repeat 3px;
+    padding-left: 12px;
+=======
     background: white image-url('search-line-icon.png') no-repeat 3px;
     padding-left: 24px;
+>>>>>>> staging
     margin-top: 1px;    
 }
 
@@ -1159,8 +1164,8 @@ div[data-role="editor-toolbar"] {
 }
 .dark-bg {
   color : #fff;
-  background : #1a2732;
-  background-color : #1a2732;
+  background : #000000;
+  background-color : #00000;
 }
 .facebook-bg {
   color: #fff;
@@ -1907,8 +1912,8 @@ div[data-role="editor-toolbar"] {
 
 .toggle-nav {
     float: left;
-    padding-right: 15px;
-    margin-top: 20px;
+    padding-right: 0.5px;
+    margin-top: 15px
 }
 
 .toggle-nav .icon-reorder {
@@ -3344,12 +3349,12 @@ ul.inbox-pagination li {
 
 .modal-header h4.modal-title {
     font-weight: 300;
-    font-family: 'Lato', sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 .modal-body label {
     font-weight: 400;
-    font-family: 'Lato', sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 
@@ -5079,6 +5084,7 @@ span.customSelect.changed {
 
     .header {
         position: absolute;
+        margin-bottom: 40px;
     }
 
     /*sidebar*/

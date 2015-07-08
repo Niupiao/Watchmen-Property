@@ -1,9 +1,5 @@
 <% provide(:title, "Log in") %>
 
-
-
-
-
 <form class="login-form" action="index.html">        
         <div class="login-wrap">
             <p class="login-img"><i class="icon_lock_alt"></i></p>
@@ -15,7 +11,10 @@
     
         <%= f.label :password %>
         <%= f.password_field :password %>
+        <p>
         <%= f.submit 'Log In', class: "btn btn-primary" %>
+        </p>
+         </center>
         <% end %>
         
 <!--              <span class="input-group-addon"><i class="icon_profile"></i></span>
