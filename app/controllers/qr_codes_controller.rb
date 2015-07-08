@@ -3,6 +3,7 @@ class QrCodesController < ApplicationController
   def new
     @qr = QrCode.new
     @property = Property.find_by(id: params[:property])
+    @qr.property_id = @property.id
   end
   
   def create
