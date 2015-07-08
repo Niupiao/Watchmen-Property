@@ -7,7 +7,7 @@ class LogsController < ApplicationController
             if @employee.employer_id == @qr.company_id
               @log = Log.new(employee_id: params[:employee], qr_code_id: params[:qr])
               if @log.save
-                render :json => QrCode.find(qr)
+                render :json => {location: @qr.location, content: @qr.content}
               else
                 render :json => {error: 'Log not created'}
               end

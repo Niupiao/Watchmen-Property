@@ -2,12 +2,12 @@
 <%= form_for(@qr) do |f| %>
   <%= render 'shared/qr_code_error_messages' %>
           
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form_control' %>
+  <%= f.label :location %>
+  <%= f.text_field :location, class: 'form_control' %>
   <br>
 
-  <%= f.label :body %>
-  <%= f.text_field :body, class: 'form_control' %>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: 'form_control' %>
   <br>
             
   <%= f.submit "Create QR Code", class: "btn btn-primary" %>

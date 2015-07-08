@@ -1,1 +1,6 @@
-Employer.create(name: 'Foo Bar', username: 'FooBar', password: 'password', company_name: 'FooBarInc')
+Employer.create!(name: 'Urtu', username: 'urtu', password: 'phoenix', company_name: 'Urtu Inc.')
+Employee.create!(name: 'Ryan Kwon', username: 'rhk1', password: 'phoenix', employer_id: 1)
+QrCode.create!(location: "26 Union Street", content: "Hey", company_id: "1")
+QrCode.create!(location: "Ambulatory Care Center", content: "Hey", company_id: "1")
+QrCode.create!(location: "Stratton Hills Association Trust", content: "Hey", company_id: "1")
+QrCode.create!(location: "1000 Massachusetts Ave", content: "Hey", company_id: "1")
