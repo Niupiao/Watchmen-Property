@@ -1,0 +1,9 @@
+<%= form_for(@property) do |f| %>
+  <%= render 'shared/property_error_messages' %>
+          
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form_control' %>
+  <br>
+            
+  <%= f.submit "Create Property Code", class: "btn btn-primary" %>
+<% end %>
