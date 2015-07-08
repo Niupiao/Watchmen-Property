@@ -7,6 +7,8 @@ gem 'rails', '4.2.1'
 gem 'bcrypt'
 # QRCode generator gem
 gem 'rqrcode'
+# Font Awesome Sass
+gem "font-awesome-sass"
 # Custom css
 gem 'bootstrap-sass'
 # Use SCSS for stylesheets
