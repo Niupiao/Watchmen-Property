@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true, :debug => false %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :debug => false %>
-  <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
   <body>
     <%= render "layouts/header" %>
@@ -21,9 +22,8 @@
 				</div>
 			</div>
 			      <%= yield %>
-			      
-			     </section>
-			     </section>
+		</section>
+		</section>
 			
 
             <!--/row-->

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+  layout "login"
   require 'securerandom'
   
   def new
