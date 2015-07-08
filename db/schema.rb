@@ -37,12 +37,13 @@ ActiveRecord::Schema.define(version: 20150707170413) do
   create_table "logs", force: :cascade do |t|
     t.integer  "qr_code_id"
     t.integer  "employee_id"
+    t.integer  "property_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "properties", force: :cascade do |t|
-    t.text     "location"
+    t.text     "name"
     t.integer  "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
