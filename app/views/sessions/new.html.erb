@@ -3,6 +3,8 @@
 
 <div class="row">
     <div class="col-md-6 col-md-offset-3">-->
+    <h1>LOGIN</h1>
+    <center>
         <%= form_for :session, url: login_path do |f| %>
     
         <%= f.label :username %>
@@ -10,8 +12,12 @@
     
         <%= f.label :password %>
         <%= f.password_field :password %>
+        <p>
         <%= f.submit 'Log In', class: "btn btn-primary" %>
+        </p>
+         </center>
         <% end %>
+       
         <!--
         <br>
     </div>
