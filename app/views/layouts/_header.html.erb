@@ -273,9 +273,15 @@
                   </li>
 				  <li class="sub-menu">
                       <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
+                         <i class="icon_table"></i>
+                          <%= link_to "View Logs", logs_path, class: "btn btn-primary center" %>
                           <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                  </li>
+				  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <%= link_to "New Property", new_property_path, class: "btn btn-primary center" %> 
                       </a>
                       <ul class="sub">
                           <li><a class="" href="form_component.html">Form Elements</a></li>                          
@@ -285,7 +291,7 @@
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>UI Features</span>
+                          <span><%= link_to "View Properties", listings_path, class: "btn btn-primary center" %></span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
@@ -297,41 +303,16 @@
                   <li>
                       <a class="" href="widgets.html">
                           <i class="icon_genius"></i>
-                          <span>Widgets</span>
+                          <span><%= link_to "New Employee", new_employee_path, class: "btn btn-primary center" %></span>
                       </a>
                   </li>
                   <li>                     
                       <a class="" href="chart-chartjs.html">
                           <i class="icon_piechart"></i>
-                          <span>Charts</span>
+                          <span><%= link_to "View Employees", employees_path, class: "btn btn-primary center" %></span>
                           
                       </a>
                                          
-                  </li>
-                             
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="basic_table.html">Basic Table</a></li>
-                      </ul>
-                  </li>
-                  
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">                          
-                          <li><a class="" href="profile.html">Profile</a></li>
-                          <li><a class="" href="login.html"><span>Login Page</span></a></li>
-                          <li><a class="" href="blank.html">Blank Page</a></li>
-                          <li><a class="" href="404.html">404 Error</a></li>
-                      </ul>
                   </li>
                   
               </ul>
