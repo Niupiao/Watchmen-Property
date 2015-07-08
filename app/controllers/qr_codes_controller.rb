@@ -2,10 +2,12 @@ class QrCodesController < ApplicationController
   
   def new
     @qr = QrCode.new
+    @property = Property.find_by(id: params[:property])
   end
   
   def create
     @qr = QrCode.new(qr_code_params)
+    @qr.property_id = params[:property]
     @qr.company_id = session[:employer]
     if @qr.save
       flash[:success] = "QRCode successfully created"
@@ -36,6 +38,6 @@ class QrCodesController < ApplicationController
   private
   
   def qr_code_params
-    params.require(:qr_code).permit(:location, :content, :company_id)
+    params.require(:qr_code).permit(:location, :content, :property_id, :company_id)
   end
 end
