@@ -1,0 +1,25 @@
+<% provide(:title, "Properties") %>
+<% params[:page_size] ||= '10' %>
+<% params[:page] ||= '1' %>
+<% params[:order] ||= 'name'%>
+<% params[:direction] ||= 'DESC' %>
+
+ <table WIDTH="50%" BORDER="2" ALIGN="CENTER" CELLSPACING="40">
+    <tr ALIGN="Center">
+      <th><h1><strong>Name</strong></h1></th>
+      <th><h1><strong>Username</strong></h1></th>
+    </tr>
+    <% Employee.limit(params[:page_size].to_i)
+           .offset(params[:page_size].to_i * (params[:page].to_i - 1))
+           .order("#{params[:order]} #{params[:direction]}")
+           .where(property_id: session[:employer]).each do |property| %>
+      <tr ALIGN="CENTER">
+        <td>
+          <%= employee.name %>
+        </td>
+        <td>
+          <%= employee.username %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
