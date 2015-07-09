@@ -352,6 +352,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon_genius:before {
 	content: "\e00a";
+	display:inline;
 }
 .icon_mobile:before {
 	content: "\e00b";

@@ -3,24 +3,44 @@
 <% params[:page] ||= '1' %>
 <% params[:order] ||= 'created_at'%>
 <% params[:direction] ||= 'DESC' %>
-
- <table WIDTH="50%" BORDER="2" ALIGN="CENTER" CELLSPACING="40">
+  
+  
+  
+  
+             <!-- page start-->
+             <div class="row">
+                 <header class="panel-heading"><h3>Properties</h3></header>
+                     <section class="panel">
+                         <table class="table table-striped">
+                           
+                             <thead>
+                             <tr>
+                                 <th>Property Name</th>
+                                 <th>View Log</th>
+                                 <th>Create QR Code</th>
+                             </tr>
+                             </thead>
+                             <tbody>
     <% Property.limit(params[:page_size].to_i)
            .offset(params[:page_size].to_i * (params[:page].to_i - 1))
            .order("#{params[:order]} #{params[:direction]}")
            .all.each do |property| %>
-      <tr ALIGN="CENTER">
-        <td>
-          <%= property.name %>
-        </td>
-        <td>
-          <%= link_to "View Logs", logs_path(property: property.id), class: "btn btn-primary center" %>
-        </td>
-        <td>
-        </td>
-        <td>
-          <%= link_to "Create QR Code", new_qr_code_path(property: property.id), class: "btn btn-primary center" %>
-        </td>
-      </tr>
-    <% end %>
-  </table>
+                             <tr>
+       <td>
+         <%= property.name %>
+       </td>
+       <td>
+         <%= link_to "View Logs", logs_path(property: property.id), class: "btn btn-primary" %>
+       </td>
+       <td>
+         <%= link_to "Create QR Code", new_qr_code_path(property: property.id), class: "btn btn-primary" %>
+       </td>
+     
+                             </tr>
+                             <% end %>
+                             </tbody>
+                                 
+                         </table>
+                     </section>
+                 </div>
+             </div>

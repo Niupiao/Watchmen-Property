@@ -9,6 +9,9 @@ class PropertiesController < ApplicationController
     @property.company_id = session[:employer]
     if @property.save
         flash[:success] = "Property successfully created"
+        redirect_to properties_path
+    else
+      render'new'
     end
     redirect_to listings_path
   end

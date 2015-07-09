@@ -4,41 +4,57 @@
 <% params[:order] ||= 'created_at'%>
 <% params[:direction] ||= 'DESC' %>
 
- <table WIDTH="50%" BORDER="2" ALIGN="CENTER" CELLSPACING="40">
-    <tr ALIGN="Center">
-      <td>Property</td>
-      <td>Location</td>
-      <td>Content</td>
-      <td>Employee</td>
-      <td>Time</td>
-    </tr>
-    <% @logs = Log.limit(params[:page_size].to_i)
-           .offset(params[:page_size].to_i * (params[:page].to_i - 1))
-           .order("#{params[:order]} #{params[:direction]}")
-           .all %>
-           <% if @property %>
-             <% @logs = @logs.where(property_id: @property.id) %>
-           <% end %>
-           <% @logs.each do |l| %>
-           <% qr = QrCode.find_by(id: l.qr_code_id) %>
-           <% employee = Employee.find_by(id: l.employee_id) %>
-           <% property = Property.find_by(id: l.property_id) %>
-      <tr ALIGN="CENTER">
-        <td>
-          <%= property.name %>
-        </td>
-        <td>
-          <%= qr.location %>
-        </td>
-        <td>
-          <%= qr.content %>
-        </td>
-        <td>
-          <%= employee.name %>
-        </td>
-        <td>
-          <%= l.created_at %>
-        </td>
-      </tr>
-    <% end %>
-  </table>
+             <!-- page start-->
+             <div class="row">
+                 
+     <header class="panel-heading"><h3>Logs</h3></header>
+     
+                     <section class="panel">
+                         <table class="table table-striped">
+                           
+                             <thead>
+                             <tr>
+                                 <th>Property</th>
+                                 <th>Location</th>
+                                 <th>Content</th>
+                                 <th>Employee</th>
+                                 <th>Time</th>
+                             </tr>
+                             </thead>
+                             <tbody>
+                               <% @logs = Log.limit(params[:page_size].to_i)
+          .offset(params[:page_size].to_i * (params[:page].to_i - 1))
+          .order("#{params[:order]} #{params[:direction]}")
+          .all %>
+          <% if @property %>
+            <% @logs = @logs.where(property_id: @property.id) %>
+          <% end %>
+          <% @logs.each do |l| %>
+          <% qr = QrCode.find_by(id: l.qr_code_id) %>
+          <% employee = Employee.find_by(id: l.employee_id) %>
+          <% property = Property.find_by(id: l.property_id) %>
+                             <tr>
+       <td>
+         <%= property.name %>
+       </td>
+       <td>
+         <%= qr.location %>
+       </td>
+       <td>
+         <%= qr.content %>
+       </td>
+       <td>
+         <%= employee.name %>
+       </td>
+       <td>
+         <%= l.created_at %>
+       </td>
+
+                             </tr>
+                             <% end %>
+                             </tbody>
+                                 
+                         </table>
+                     </section>
+                 </div>
+             </div>
