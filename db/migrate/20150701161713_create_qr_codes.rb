@@ -4,6 +4,7 @@ class CreateQrCodes < ActiveRecord::Migration
       t.text :location
       t.text :content
       t.integer :company_id
+      t.integer :property_id
 
       t.timestamps null: false
     end

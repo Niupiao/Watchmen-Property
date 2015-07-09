@@ -3,6 +3,7 @@ class CreateLogs < ActiveRecord::Migration
     create_table :logs do |t|
       t.integer :qr_code_id
       t.integer :employee_id
+      t.integer :property_id
 
       t.timestamps null: false
     end
