@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'auth' => 'sessions#create'
   get 'logs/new' => 'logs#new'
   get 'logs' => 'logs#index'
+  get 'index' => 'properties#listings'
   
   get 'listings' => 'properties#listings'
 end

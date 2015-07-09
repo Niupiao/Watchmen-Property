@@ -1,9 +1,27 @@
 <%= form_for(@property) do |f| %>
   <%= render 'shared/property_error_messages' %>
+            <header class="panel-heading">
+                           <h3>New Property</h3>
+                         </header>
+                     <section class="panel">
+                       
+                         <div class="panel-body">
+                             <div class="form">
+                                 <form class="form-validate form-horizontal " id="register_form" method="get" action="">
+                                     <div class="form-group ">
+                                         <%= f.label :name, class: "control-label col-lg-2"%><span class="required"></span>
+                                         <div class="col-lg-10">
+                                             <%= f.text_field :name, class: "form-control" %>
+                                         </div>
+                                     <div class="form-group">
+                                         <div class="col-lg-offset-2 col-lg-10"><p></p>
+                                             <!--<button class="btn btn-primary" type="submit">Create Employee</button>-->
+                                             <%= f.submit "Create Property Code", class: "btn btn-primary" %>
+                                             <% end %>
+                                         </div>
+                                     </div>
+                                 </form>
+                             </div>
+                         </div>
+                     </section>
           
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form_control' %>
-  <br>
-            
-  <%= f.submit "Create Property Code", class: "btn btn-primary" %>
-<% end %>
