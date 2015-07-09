@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root 'employers#show'
+  
   resources :employees
   resources :employers
   resources :qr_codes

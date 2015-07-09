@@ -10,6 +10,7 @@ class PropertiesController < ApplicationController
     if @property.save
         flash[:success] = "Property successfully created"
     end
+    redirect_to listings_path
   end
   
   def listings
