@@ -1,4 +1,5 @@
-<% provide(:title, "QR Show") %>
+<% provide(:title, @qr.location) %>
+Property: <%= Property.find(@qr.property_id).name %>
 Location: <%= @qr.location %>
 Content: <%= @qr.content %>
 <% require 'rqrcode' %>
