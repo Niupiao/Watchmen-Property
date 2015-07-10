@@ -1,5 +1,5 @@
 <% provide(:title, "QR Code") %>
-<%= form_for(@qr) do |f| %>
+<%= form_for @qr, :url => qr_codes_path(property: params[:property]), :action => 'POST' do |f| %>
   <%= render 'shared/qr_code_error_messages' %>
           
 
